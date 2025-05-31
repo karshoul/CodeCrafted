@@ -1,156 +1,120 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CodeCrafted</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Trực Tuyến - Nền tảng giáo dục trực tuyến hàng đầu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="mainHeader">
-    <h1>CodeCrafted</h1>
-    <nav>
-      <a href="#courses">Khoá học</a>
-      <a href="#about">Giới thiệu</a>
-      <a href="#contact">Liên hệ</a>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">HọcTrựcTuyến</div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#courses">Khóa học</a></li>
+                <li><a href="#features">Tính năng</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login">Đăng nhập</button>
+                <button class="signup">Đăng ký</button>
+            </div>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <div>
-      <h2>Học mọi lúc, mọi nơi với nền tảng số</h2>
-      <a href="#courses" class="btn">Khám phá khoá học</a>
+    <main>
+        <section class="hero" id="home">
+            <h1 id="hero-title"></h1>
+            <p>Học mọi lúc, mọi nơi với các chuyên gia hàng đầu</p>
+            <button class="cta">Bắt đầu học ngay</button>
+        </section>
+
+        <section class="courses animate" id="courses">
+            <h2>Các khóa học phổ biến</h2>
+            <div class="course-grid"></div>
+        </section>
+
+        <section class="features animate" id="features">
+            <div class="feature">
+                <h3>Học theo tốc độ của bạn</h3>
+                <p>Tự điều chỉnh tiến độ học tập phù hợp với nhu cầu cá nhân</p>
+            </div>
+            <div class="feature">
+                <h3>Giảng viên chất lượng</h3>
+                <p>Học từ các chuyên gia giàu kinh nghiệm trong ngành</p>
+            </div>
+            <div class="feature">
+                <h3>Chứng chỉ hoàn thành</h3>
+                <p>Nhận chứng chỉ sau khi hoàn thành khóa học</p>
+            </div>
+        </section>
+
+        <section class="stats animate">
+            <div class="stat">
+                <div class="counter" data-target="10000">0</div>
+                <p>Học viên</p>
+            </div>
+            <div class="stat">
+                <div class="counter" data-target="150">0</div>
+                <p>Khóa học</p>
+            </div>
+            <div class="stat">
+                <div class="counter" data-target="50">0</div>
+                <p>Giảng viên</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Về chúng tôi</h4>
+                <p>Nền tảng học tập trực tuyến chất lượng cao</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liên kết nhanh</h4>
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#courses">Khóa học</a></li>
+                    <li><a href="#features">Tính năng</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Liên hệ</h4>
+                <p>email@hoctructuyen.com</p>
+                <p>+84 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Đăng nhập</button>
+                <button class="tab-btn" data-tab="signup">Đăng ký</button>
+            </div>
+            <div class="tab-content" id="login">
+                <form id="loginForm">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Mật khẩu" required>
+                    <button type="submit">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="tab-content" id="signup" style="display:none">
+                <form id="signupForm">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Mật khẩu" required>
+                    <input type="password" placeholder="Nhập lại mật khẩu" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <section id="courses" class="fade-in">
-    <h3>Khoá học phổ biến</h3>
-    <div class="course-list">
-      <div class="course" data-course="web">
-        <h4>Lập trình Web</h4>
-        <p>Học HTML, CSS, JavaScript từ cơ bản đến nâng cao.</p>
-      </div>
-      <div class="course" data-course="data">
-        <h4>Phân tích dữ liệu</h4>
-        <p>Sử dụng Python và Excel để xử lý dữ liệu hiệu quả.</p>
-      </div>
-      <div class="course" data-course="uiux">
-        <h4>Thiết kế UI/UX</h4>
-        <p>Học cách tạo giao diện người dùng chuyên nghiệp.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="fade-in">
-    <h3>Về chúng tôi</h3>
-    <p style="text-align: center; max-width: 700px; margin: auto;">
-      Chúng tôi cung cấp nền tảng học tập trực tuyến hiện đại, giúp bạn dễ dàng tiếp cận kiến thức chất lượng từ bất cứ đâu.
-    </p>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h3>Liên hệ</h3>
-    <form>
-      <input type="text" placeholder="Tên của bạn" required />
-      <input type="email" placeholder="Email của bạn" required />
-      <textarea placeholder="Tin nhắn của bạn" rows="5"></textarea>
-      <button type="submit">Gửi</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Học Trực Tuyến. All rights reserved.</p>
-  </footer>
-
-  <!-- Modal Popup -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="close-btn" id="modalCloseBtn" aria-label="Đóng">&times;</button>
-      <h4 id="modalTitle">Tiêu đề khoá học</h4>
-      <p id="modalContent">Nội dung chi tiết khoá học sẽ hiển thị ở đây.</p>
-    </div>
-  </div>
-
-  <script>
-    // Scroll effects for header and fade-in
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('mainHeader');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-
-      document.querySelectorAll('.fade-in').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    });
-
-  // Smooth scroll khi click nút
-  document.querySelector('a[href="#courses"]').addEventListener('click', function(e) {
-    e.preventDefault();
-    const section = document.querySelector('#courses');
-    section.scrollIntoView({ behavior: 'smooth' });
-  });
-
-    // Modal logic
-    const coursesData = {
-      web: {
-        title: "Khoá học Lập trình Web",
-        content: "Học từ cơ bản đến nâng cao về HTML, CSS, JavaScript, giúp bạn tạo ra các trang web hiện đại và responsive."
-      },
-      data: {
-        title: "Khoá học Phân tích dữ liệu",
-        content: "Sử dụng Python, Excel, và các công cụ phân tích để xử lý và trực quan hoá dữ liệu hiệu quả."
-      },
-      uiux: {
-        title: "Khoá học Thiết kế UI/UX",
-        content: "Tìm hiểu cách thiết kế giao diện người dùng đẹp mắt, thân thiện, nâng cao trải nghiệm người dùng."
-      }
-    };
-
-    const modalOverlay = document.getElementById('modalOverlay');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalContent = document.getElementById('modalContent');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
-
-    // Mở modal khi click khoá học
-    document.querySelectorAll('.course').forEach(course => {
-      course.addEventListener('click', () => {
-        const key = course.getAttribute('data-course');
-        if (coursesData[key]) {
-          modalTitle.textContent = coursesData[key].title;
-          modalContent.textContent = coursesData[key].content;
-          modalOverlay.classList.add('active');
-          // Disable scroll behind modal
-          document.body.style.overflow = 'hidden';
-        }
-      });
-    });
-
-    // Đóng modal khi click nút đóng hoặc bên ngoài modal
-    modalCloseBtn.addEventListener('click', () => {
-      modalOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-    modalOverlay.addEventListener('click', e => {
-      if (e.target === modalOverlay) {
-        modalOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-
-    // Optional: Đóng modal khi nhấn phím Esc
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-        modalOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
+    <script src="main.js"></script>
 </body>
 </html>
